@@ -1,0 +1,47 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content= 
+			"width=device-width, initial-scale=1.0"> 
+	<script src="http://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
+	<title> 
+		Draw with the mouse in a HTML5 canvas 
+	</title> 
+	
+	<style> 
+		* { 
+			overflow: hidden; 
+		} 
+		body { 
+			text-align: center; 
+		} 
+		h1 { 
+			color: green; 
+		} 
+	</style>
+<script>
+function to_image(){
+                var canvas = document.getElementById("canvas");
+                document.getElementById("theimage").src = canvas.toDataURL();
+                Canvas2Image.saveAsPNG(canvas);
+            }
+</script>
+</head> 
+
+<body> 
+<div><button onclick="to_image()">Click to save image </button></div>
+        <image id="theimage"></image>
+
+
+	<h1>Canvas</h1> 
+	<b>Draw anything you want</b> 
+	<hr> 
+	<canvas id="canvas"  width="100" height="100"></canvas>	
+	<script src="index.js"></script> 
+	   
+
+</div>
+</body> 
+</html> 
