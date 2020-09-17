@@ -1,0 +1,1 @@
+The files in this folder helps you save the drawing on the canvas as a image.
