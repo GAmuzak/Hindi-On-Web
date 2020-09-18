@@ -24,23 +24,23 @@
 <script>
 function to_image(){
                 var canvas = document.getElementById("canvas");
-                document.getElementById("theimage").src = canvas.toDataURL();
+                document.getElementById("canvas").src = canvas.toDataURL();
                 Canvas2Image.saveAsPNG(canvas);
             }
 </script>
 </head> 
 
 <body> 
-<div><button onclick="to_image()">Click to save image </button></div>
-        <image id="theimage"></image>
 
 
-	<h1>Canvas</h1> 
-	<b>Draw anything you want</b> 
-	<hr> 
-	<canvas id="canvas"  width="100" height="100"></canvas>	
+	<h1>Canvas Draw anything you want</h1> 
+	
+	
+	<canvas id="canvas"  width="400" height="200" style="border:2px solid"></canvas>	
 	<script src="index.js"></script> 
-	   
+
+<div><button onclick="to_image()">Click to save image </button></div>
+       <!-- <image id="theimage">the image</image>-->
 
 </div>
 </body> 
