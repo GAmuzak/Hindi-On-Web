@@ -3,11 +3,11 @@
 // This is considered best practice. 
 window.addEventListener('load', ()=>{ 
 		
-	resize(); // Resizes the canvas once the window loads 
+	//resize(); // Resizes the canvas once the window loads 
 	document.addEventListener('mousedown', startPainting); 
 	document.addEventListener('mouseup', stopPainting); 
 	document.addEventListener('mousemove', sketch); 
-	window.addEventListener('resize', resize); 
+	//window.addEventListener('resize', resize); 
 }); 
 	
 const canvas = document.querySelector('#canvas'); 
@@ -74,7 +74,4 @@ ctx.lineTo(coord.x , coord.y);
 // Draws the line. 
 ctx.stroke(); 
 } 
- var link = document.getElementById('link');
-  link.setAttribute('download', 'MintyPaper.png');
-  link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
-  link.click();
+ 
