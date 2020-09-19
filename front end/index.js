@@ -75,3 +75,9 @@ ctx.lineTo(coord.x , coord.y);
 ctx.stroke(); 
 } 
  
+ 
+function clearArea() {
+    // Use the identity matrix while clearing the canvas
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+}

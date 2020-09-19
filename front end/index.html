@@ -23,9 +23,9 @@
 	</style>
 <script>
 function to_image(){
-                var canvas = document.getElementById("canvas");
+		var canvas = document.getElementById("canvas");
                 document.getElementById("canvas").src = canvas.toDataURL();
-                Canvas2Image.saveAsPNG(canvas);
+                Canvas2Image.saveAsPNG(canvas, width=400, height=200, filename="image");
             }
 </script>
 </head> 
@@ -33,13 +33,14 @@ function to_image(){
 <body> 
 
 
-	<h1>Canvas Draw anything you want</h1> 
+	<h1>Draw a hindi character</h1> 
 	
 	
 	<canvas id="canvas"  width="400" height="200" style="border:2px solid"></canvas>	
 	<script src="index.js"></script> 
 
 <div><button onclick="to_image()">Click to save image </button></div>
+<div><button onclick="javascript:clearArea();return false;">Clear Area</button></div>
        <!-- <image id="theimage">the image</image>-->
 
 </div>
