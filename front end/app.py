@@ -27,7 +27,7 @@ def inference_model():
 	
 def getmap(pred):
 	mapping={
-	0: 'va', 1: '5', 2: 'ae', 3: '3', 4: 'sa', 5: 'bha', 6: 'da', 7: '7', 8: 'cha', 9: '2', 10: 'la', 11: 'ana', 12: 'ka', 
+	0: 'va or व', 1: '5 or ५', 2: 'ae or ए', 3: '3', 4: 'sa', 5: 'bha', 6: 'da', 7: '7', 8: 'cha', 9: '2', 10: 'la', 11: 'ana', 12: 'ka', 
 	13: 'pa', 14: 'aa', 15: 'gha', 16: 'tra', 17: 'ta', 18: 'tha', 19: 'chha', 20: 'ang', 21: 'yna', 22: 'taa', 23: 'dhaa', 24: '6',
 	25: 'na', 26: 'ga', 27: 'o', 28: 'gya', 29: '8', 30: 'kha', 31: 'ma', 32: 'thaa', 33: 'ra', 34: 'aha', 35: 'ai', 36: 'a', 
 	37: 'sha',38: 'oo', 39: 'au', 40: 'pha', 41: 'ee', 42: '4', 43: 'dha', 44: '9', 45: 'u', 46: 'daa', 47: 'i', 48: '1', 49: 'ha', 
@@ -64,4 +64,4 @@ if image_data is not None:
 		
 		output=infer_model.predict(x=im_preprocess)
 		final_class=np.argmax(output, axis=1)[0]   
-		st.write(getmap(final_class))
+		st.write("Prediction: The letter is a ",getmap(final_class))
